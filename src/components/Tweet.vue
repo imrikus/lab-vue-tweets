@@ -1,15 +1,12 @@
 <template>
+
   <div className="tweet">
-    <img
-      src="https://i.imgur.com/9yw1Fyw.jpg"
-      className="profile"
-      alt="profile"
-    />
+    <img src="https://i.imgur.com/9yw1Fyw.jpg" className="profile" alt="profile" />
 
     <div className="body">
       <div className="top">
         <span className="user">
-          <span className="name">Ironhack</span>
+          <span className="name">{{ tweet.user.name }}</span>
           <span className="handle">@ironhack</span>
         </span>
 
@@ -32,7 +29,15 @@
 
     <i class="fas fa-ellipsis-h"></i>
   </div>
+
 </template>
+
+<script>
+export default {
+  props: ["objectRecept"],
+  mounted() { console.log(this.objectRecept) }
+}
+</script>
 
 <style scoped>
 a {
